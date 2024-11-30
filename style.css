@@ -1,0 +1,87 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(31, 1fr); /* 1 label column + 30 data columns */
+    grid-template-rows: repeat(17, 1fr);   /* 1 label row + 16 data rows */
+    width: 100%; /* Expand to fill container */
+    height: 100%; /* Expand to fill container */
+    gap: 4px;
+}
+
+.cell-label, .cell-color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1; /* Ensure cells remain square */
+    font-size: calc(0.5vw + 0.5vh); /* Responsive font size for labels */
+}
+
+.cell-label {
+    font-size:16px;
+}
+
+.color-selected {
+    border: 2px solid #ffffff;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+#game {
+    display: none;
+    gap: 16px;
+}
+
+.game-started #game {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-started #pre-game-panel {
+    display: none;
+}
+
+#next-player {
+    text-transform: uppercase;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+textarea#players {
+    display: block;
+    margin: 0 0 1rem;
+}
+
+div#grid {
+    width: auto;
+    flex-grow: 1;
+    border-bottom: 1px solid white;
+    padding-bottom: 16px;
+}
+
+div#info-panel {
+}
+
+.btn {
+    margin: 0 0 2px 2px;
+}
+
+div#next-player {
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-bottom: 8px;
+}

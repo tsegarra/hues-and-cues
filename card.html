@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hues and Cues</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="getCellColor.js"></script>
+    <style>
+        div#cards {
+            width: 100%;
+        }
+
+        #cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        #cards {
+             width: 100%;
+         }
+
+        .swatch {
+              width: 48px;
+              height: 48px;
+          }
+
+        .cell-color.color-selected {
+               border: 2px solid #ffffff;
+        }
+
+        .card {
+            align-items: center;
+            flex-flow: column;
+            display: flex;
+            border: 1px solid;
+            padding: 1rem;
+            height: 25vh;
+            gap: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cards"></div>
+    <script src="card.js"></script>
+</body>
+</html>
