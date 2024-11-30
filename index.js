@@ -126,6 +126,17 @@ function createGrid() {
             undo();
         }
     });
+
+    document.getElementById("skip").addEventListener('click', () => {
+        const textarea = document.getElementById("players");
+        const players = textarea.value.split("\n").filter(name => name.trim() !== "");
+        const playerName = players.shift(); // Get the next player
+        const allPlayerNames = [...players, playerName];
+        textarea.value = allPlayerNames.join("\n"); // Update the textarea
+
+        const nextPlayerElement = document.getElementById('next-player');
+        nextPlayerElement.textContent = getUniquePrefix(allPlayerNames[0], allPlayerNames);
+    });
 }
 
 function startGame() {
